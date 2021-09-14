@@ -1,0 +1,239 @@
+.sidebar {
+  padding: 40px;
+  min-height: 100vh;
+  height: 100%;
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 6px 0 10px #33333318;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #eaf1f6;
+  transition: width 0.4s;
+  overflow-x: hidden;
+}
+
+.sidebar.extended {
+  width: 1000px;
+  transition: width 0.4s;
+}
+
+.sidebar .left {
+  width: 240px;
+}
+
+.sidebar .left .user {
+  width: 100%;
+  background-color: #fff;
+  height: 60px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .left .user img {
+  height: 100%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.sidebar .left .user h4 {
+  font-size: 15px;
+}
+
+.sidebar .left .user p {
+  font-size: 13px;
+}
+
+.sidebar .left .toggle {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.sidebar .left .toggle h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar .left .toggle .view {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.sidebar .left .toggle .view::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 5px 10px #33333325 inset;
+  pointer-events: none;
+}
+
+.sidebar .left .toggle .view div {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e8ee;
+}
+
+.sidebar .left .toggle .view div.active {
+  background-color: #98efc9;
+}
+
+.sidebar .left .toggle .view div i {
+  font-size: 26px;
+  color: #9c9c9c;
+}
+
+.sidebar .left .toggle .view div.active i {
+  color: #272727;
+}
+
+.sidebar .left .feedback {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .left .feedback h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sidebar .left .feedback button {
+  border: none;
+  background-color: #98efc9;
+  outline: none;
+  box-shadow: none;
+  padding: 15px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px #33333315 inset;
+  margin-bottom: 5px;
+}
+
+.sidebar .left .feedback button.red {
+  background-color: #eca5a7;
+}
+
+.sidebar .right {
+  display: none;
+  margin-left: 0px;
+  transition: margin-left 0.3s;
+  transition-delay: 1s;
+}
+
+.sidebar.extended .right {
+  display: flex;
+  flex-direction: column;
+  width: 458px;
+  margin-left: 80px;
+  transition: margin-left 0.3s;
+  transition-delay: 1s;
+}
+
+.sidebar .right p.subtitle {
+  font-size: 14px;
+  margin: 5px 0 30px;
+}
+
+.sidebar.extended .right .input-field p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.sidebar.extended .right .input-field .split {
+  display: flex;
+  align-items: baseline;
+}
+
+.sidebar.extended .right .input-field .split .input:first-child:not(.full) {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.sidebar.extended .right .input-field .split .input:nth-child(2) {
+  width: 220px;
+}
+
+.sidebar.extended .right .input-field .split p.err {
+  font-size: 12px;
+  margin-left: 20px;
+  color: #e45f60;
+  font-weight: 500;
+}
+
+.sidebar.extended .right .input-field .input {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 10px #33333315;
+}
+
+.sidebar.extended .right .input-field .input::placeholder,
+.sidebar.extended .right .input-field textarea.input::placeholder {
+  color: #ccc;
+}
+
+.sidebar.extended .right .input-field textarea.input {
+  width: 450px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #33333315;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+}
+
+.sidebar.extended .right button {
+  width: fit-content;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px #33333335;
+  padding: 10px 35px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #5cc8a1;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
